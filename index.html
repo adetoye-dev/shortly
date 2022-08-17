@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--- Font Awesome--->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <!-- displays site properly based on user's device -->
 
@@ -27,20 +36,35 @@
     </style>
   </head>
   <body>
-    <header>
-      <div class="logo">Shortly</div>
-      <nav>
-        <ul>
-          <li><a href="#">Feature</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Resources</a></li>
-        </ul>
-        <div class="login-btns-container">
-          <a href="#" class="button">Login</a>
-          <a href="#" class="button">Signup</a>
+    <header class="header">
+      <div class="container flex header-container">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="shortly-logo" />
         </div>
-      </nav>
+
+        <div
+          aria-controls="primary-navigation"
+          onclick="toggleNav()"
+          class="menu-btn"
+        >
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div class="container nav-container">
+        <nav class="nav primary-navigation flex-direction">
+          <ul class="nav-list flex-direction">
+            <li class="nav-list-item"><a href="#">Feature</a></li>
+            <li class="nav-list-item"><a href="#">Pricing</a></li>
+            <li class="nav-list-item"><a href="#">Resources</a></li>
+          </ul>
+          <div class="login-btns-container flex-direction">
+            <a href="#" class="button">Login</a>
+            <a href="#" class="button">Signup</a>
+          </div>
+        </nav>
+      </div>
     </header>
+    <main class="main"></main>
 
     <div class="attribution">
       Challenge by

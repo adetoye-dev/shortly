@@ -1,3 +1,7 @@
+:root {
+  --gap: 3rem;
+}
+
 body {
   position: relative;
   width: 100%;
@@ -19,4 +23,70 @@ html {
 
 img {
   max-width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1048px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.header-container {
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.logo {
+  margin-right: 5rem;
+}
+
+.nav {
+  position: relative;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  outline: 2px solid green;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+}
+
+.login-btns-container {
+  display: flex;
+  gap: var(--gap);
+}
+
+.main {
+  height: 40rem;
+  outline: 2px solid blue;
+}
+
+@media (min-width: 600px) {
+  .nav {
+    position: absolute;
+    display: flex;
+    width: 80%;
+    top: -5rem;
+    right: 0;
+  }
+  .flex-direction {
+    flex-direction: row;
+  }
+  .menu-btn {
+    display: none;
+  }
 }
