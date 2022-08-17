@@ -4,7 +4,7 @@ const navMenuIcon = document.querySelector("#menu-icon");
 
 navMenuBtn.addEventListener("click", () => {
   if (primaryNav.style.display == "flex") {
-    primaryNav.style.display = "none";
+    primaryNav.style.display = "";
     navMenuIcon.classList.remove("fa-times");
     navMenuIcon.classList.add("fa-bars");
   } else {
