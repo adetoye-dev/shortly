@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -21,7 +21,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <script src="./script.js" defer></script>
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -42,12 +42,8 @@
           <img src="./images/logo.svg" alt="shortly-logo" />
         </div>
 
-        <div
-          aria-controls="primary-navigation"
-          onclick="toggleNav()"
-          class="menu-btn"
-        >
-          <i class="fas fa-bars"></i>
+        <div aria-controls="primary-navigation" class="menu-btn" id="menu-btn">
+          <i class="fas fa-bars" id="menu-icon"></i>
         </div>
       </div>
       <div class="container nav-container">
