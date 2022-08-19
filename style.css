@@ -170,6 +170,35 @@ a {
   max-width: 155%;
 }
 
+.enter-link-container {
+  position: relative;
+  background-image: url("./images/bg-shorten-mobile.svg");
+  background-color: var(--Dark-Violet);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  border-radius: 0.8rem;
+}
+
+.enter-link-form {
+  gap: var(--gap);
+}
+
+.form-item {
+  border-radius: 0.6rem;
+  padding: 1.2rem;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.shorten-btn {
+  color: var(--white);
+  background-color: var(--Cyan);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
 @media (min-width: 600px) {
   .nav {
     position: relative;
@@ -217,6 +246,16 @@ a {
   }
   .hero-text {
     margin: 1rem 0 3rem;
+  }
+  .enter-link-container {
+    background-image: url("./images/bg-shorten-desktop.svg");
+    background-size: cover;
+  }
+  .form-item {
+    padding: 0.8rem;
+  }
+  .shorten-btn {
+    width: 20%;
   }
 }
 
