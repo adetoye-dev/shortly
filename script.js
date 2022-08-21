@@ -13,3 +13,18 @@ navMenuBtn.addEventListener("click", () => {
     navMenuIcon.classList.add("fa-times");
   }
 });
+
+const params = new URLSearchParams({
+  url: "https://google.com",
+});
+
+const fetchData = async () => {
+  const data = await fetch("https://api.shrtco.de/v2/shorten", {
+    method: "POST",
+    body: params,
+  }).then((response) => response.json());
+
+  console.log(data.result.full_short_link);
+};
+
+fetchData();
