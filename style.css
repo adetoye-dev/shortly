@@ -56,6 +56,8 @@ a {
   width: 100%;
 }
 
+
+
 .header-container {
   justify-content: space-between;
   padding: 2rem 0;
@@ -154,7 +156,7 @@ a {
   color: var(--Grayish-Violet);
 }
 
-.hero-cta {
+.cta-btn {
   background-color: var(--Cyan);
   color: var(--white);
   padding: 0.5em 2em;
@@ -205,8 +207,14 @@ a {
 }
 
 .shortened-links-container {
-  padding: 11.5rem 0;
+  padding: 11.5rem 0 1rem;
   background-color: var(--Gray);
+  outline: 2px solid green;
+}
+
+.advanced-statistics-container {
+  background-color: var(--Gray);
+  padding-bottom: 9.5rem;
 }
 
 .shortened-links {
@@ -223,10 +231,19 @@ a {
 }
 
 .statistics-card-container {
+  position: relative;
   display: flex;
-  gap: var(--gap);
+  gap: 7rem;
   justify-content: space-between;
-  margin: 10rem 0 2rem;
+  margin-top: 10rem;
+}
+
+.card-divider {
+  position: absolute;
+  width: 1rem;
+  height: 100%;
+  background-color: var(--Cyan);
+  align-self: center;
 }
 
 .statistics-card {
@@ -253,6 +270,24 @@ a {
 
 .card-title {
   margin-bottom: 1rem;
+}
+
+.card-text {
+  color: var(--Grayish-Violet);
+}
+
+.boost-links {
+  background-image: url("./images/bg-boost-mobile.svg");
+  background-color: var(--Dark-Violet);
+}
+
+.boost-links-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  padding: 8rem 0;
+  color: var(--white);
 }
 
 @media (min-width: 600px) {
@@ -317,10 +352,34 @@ a {
     bottom: -5rem;
   }
   .shortened-links-container {
-    padding: 7.5rem 0;
+    padding: 7.5rem 0 1rem;
+  }
+  .advanced-statistics-container{
+    padding-bottom: 7.5rem;
+  }
+  .statistics-card-container {
+    gap: var(--gap);
+    margin-bottom: 5rem;
   }
   .statistics-card {
     text-align: left;
+  }
+  .card-divider {
+    width: 100%;
+    height: 1rem;
+    align-self: center;
+  }
+  .card2 {
+    bottom: -2.5rem;
+  }
+  .card3 {
+    bottom: -5rem;
+  }
+  .boost-links {
+    background-image: url("./images/bg-boost-desktop.svg");
+  }
+  .boost-links-container {
+    padding: 6rem 0;
   }
 }
 
