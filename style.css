@@ -178,6 +178,7 @@ a {
   background-repeat: no-repeat;
   padding: 3rem;
   border-radius: 0.8rem;
+  bottom: -9rem;
 }
 
 .enter-link-form {
@@ -192,11 +193,66 @@ a {
   border: none;
 }
 
+#enter-link-input {
+  font-size: 1.7rem;
+}
+
 .shorten-btn {
   color: var(--white);
   background-color: var(--Cyan);
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+}
+
+.shortened-links-container {
+  padding: 11.5rem 0;
+  background-color: var(--Gray);
+}
+
+.shortened-links {
+  outline: 2px solid brown;
+}
+
+.advanced-statistics {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.statistics-text {
+  margin: 1.5rem 0;
+}
+
+.statistics-card-container {
+  display: flex;
+  gap: var(--gap);
+  justify-content: space-between;
+  margin: 10rem 0 2rem;
+}
+
+.statistics-card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  padding: 2rem;
+  padding-top: 0;
+  background-color: var(--white);
+  border-radius: .8rem;
+}
+
+.card-icon {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-Violet);
+  margin: 0 auto;
+  top: -3.5rem;
+}
+
+.card-title {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -256,6 +312,15 @@ a {
   }
   .shorten-btn {
     width: 20%;
+  }
+  .enter-link-container {
+    bottom: -5rem;
+  }
+  .shortened-links-container {
+    padding: 7.5rem 0;
+  }
+  .statistics-card {
+    text-align: left;
   }
 }
 
