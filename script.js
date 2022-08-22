@@ -24,6 +24,25 @@ const LOCAL_STORAGE_LIST_KEY = "shortened.links";
 const shortenedLinkList =
   JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 
+//copy selected link on button click
+linksContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("copy")) {
+    const selectedLink = shortenedLinkList.find(
+      (link) => link.id === e.target.id
+    );
+    copyText(selectedLink.shortenedURL);
+  }
+});
+
+const copyText = (input) => {
+  let inputElement = document.createElement("input");
+  inputElement.setAttribute("value", input);
+  document.body.appendChild(inputElement);
+  inputElement.select();
+  document.execCommand("Copy");
+  inputElement.parentNode.removeChild(inputElement);
+};
+
 //fetch data from api
 const fetchData = async (url) => {
   const data = await fetch("https://api.shrtco.de/v2/shorten", {
@@ -69,6 +88,9 @@ const renderList = () => {
 
     const shortenedLink = list.querySelector(".shortened-link");
     shortenedLink.innerText = listItem.shortenedURL;
+
+    const copyBtn = list.querySelector(".copy-url-btn");
+    copyBtn.id = listItem.id;
 
     linksContainer.appendChild(list);
   });
