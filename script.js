@@ -19,8 +19,10 @@ navMenuBtn.addEventListener("click", () => {
   }
 });
 
-//shortened list item declarations
-const shortenedLinkList = [];
+//local storage key and shortened list items
+const LOCAL_STORAGE_LIST_KEY = "shortened.links";
+const shortenedLinkList =
+  JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 
 //fetch data from api
 const fetchData = async (url) => {
@@ -41,10 +43,8 @@ form.addEventListener("submit", async (e) => {
   const newLink = await makeListItem(input.value);
   input.value = "";
   shortenedLinkList.push(newLink);
-  console.log(newLink);
-  console.log(shortenedLinkList);
 
-  renderList();
+  saveAndRenderList();
 });
 
 //make list item
@@ -79,3 +79,17 @@ const clearElements = (element) => {
     element.removeChild(element.firstChild);
   }
 };
+
+const saveList = () => {
+  localStorage.setItem(
+    LOCAL_STORAGE_LIST_KEY,
+    JSON.stringify(shortenedLinkList)
+  );
+};
+
+const saveAndRenderList = () => {
+  saveList();
+  renderList();
+};
+
+renderList();
