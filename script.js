@@ -30,18 +30,14 @@ linksContainer.addEventListener("click", (e) => {
     const selectedLink = shortenedLinkList.find(
       (link) => link.id === e.target.id
     );
+
     copyText(selectedLink.shortenedURL);
+
+    const clickedBtn = document.getElementById(e.target.id);
+    clickedBtn.innerText = "Copied";
+    clickedBtn.classList.add("copied");
   }
 });
-
-const copyText = (input) => {
-  let inputElement = document.createElement("input");
-  inputElement.setAttribute("value", input);
-  document.body.appendChild(inputElement);
-  inputElement.select();
-  document.execCommand("Copy");
-  inputElement.parentNode.removeChild(inputElement);
-};
 
 //fetch data from api
 const fetchData = async (url) => {
@@ -112,6 +108,16 @@ const saveList = () => {
 const saveAndRenderList = () => {
   saveList();
   renderList();
+};
+
+//copy text function
+const copyText = (input) => {
+  let inputElement = document.createElement("input");
+  inputElement.setAttribute("value", input);
+  document.body.appendChild(inputElement);
+  inputElement.select();
+  document.execCommand("Copy");
+  inputElement.parentNode.removeChild(inputElement);
 };
 
 renderList();

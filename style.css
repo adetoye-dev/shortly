@@ -249,6 +249,10 @@ a {
   color: var(--white);
 }
 
+.copied {
+  background-color: var(--Dark-Violet);
+}
+
 .advanced-statistics {
   text-align: center;
   padding-top: 5rem;
