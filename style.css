@@ -88,6 +88,10 @@ a {
   color: var(--white);
 }
 
+.nav-list a:hover {
+  color: var(--Very-Dark-Violet);
+}
+
 .separator {
   position: relative;
   width: 100%;
@@ -121,6 +125,10 @@ a {
   display: flex;
   align-items: center;
   gap: var(--gap);
+}
+
+.login-btn:hover {
+  color: var(--Very-Dark-Violet);
 }
 
 .sign-up-btn {
@@ -162,6 +170,7 @@ a {
   color: var(--white);
   padding: 0.5em 2em;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .hero-img {
@@ -205,6 +214,7 @@ a {
   background-color: var(--Cyan);
   font-weight: 700;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .shortened-links-container {
@@ -247,6 +257,7 @@ a {
   align-items: center;
   justify-content: center;
   color: var(--white);
+  cursor: pointer;
 }
 
 .copied {
@@ -349,6 +360,10 @@ a {
 
 .footer-section a {
   color: var(--white);
+}
+
+.footer-section a:hover {
+  color: var(--Cyan);
 }
 
 .footer-section-title {
