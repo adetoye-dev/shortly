@@ -186,7 +186,7 @@ a {
   position: relative;
   background-image: url("./images/bg-shorten-mobile.svg");
   background-color: var(--Dark-Violet);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 3rem;
   border-radius: 0.8rem;
@@ -339,6 +339,8 @@ a {
 .boost-links {
   background-image: url("./images/bg-boost-mobile.svg");
   background-color: var(--Dark-Violet);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .boost-links-container {
@@ -454,7 +456,6 @@ a {
   }
   .enter-link-container {
     background-image: url("./images/bg-shorten-desktop.svg");
-    background-size: cover;
     bottom: -5rem;
   }
   #error-msg {
