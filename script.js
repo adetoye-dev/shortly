@@ -3,6 +3,7 @@ const navMenuBtn = document.querySelector("#menu-btn");
 const navMenuIcon = document.querySelector("#menu-icon");
 const input = document.querySelector("#enter-link-input");
 const form = document.querySelector("#enter-link-form");
+const errorMsg = document.querySelector("#error-msg");
 const linksContainer = document.querySelector(".shortened-links");
 const linkListTemplate = document.querySelector("#shortened-url-template");
 
@@ -54,6 +55,14 @@ const fetchData = async (url) => {
 //form was submitted
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  if (input.value == "") {
+    input.classList.add("input-error-handling");
+    errorMsg.style.display = "block";
+    return;
+  }
+  input.classList.remove("input-error-handling");
+  errorMsg.style.display = "";
 
   const newLink = await makeListItem(input.value);
   input.value = "";
