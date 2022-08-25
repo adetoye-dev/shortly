@@ -8,6 +8,7 @@
   --Red: hsl(0, 87%, 67%);
   --Gray: hsl(0, 0%, 75%);
   --Grayish-Violet: hsl(257, 7%, 63%);
+  --Very-Light-Gray: hsl(230, 25%, 95.3%);
   --Very-Dark-Blue: hsl(255, 11%, 22%);
   --Very-Dark-Violet: hsl(260, 8%, 14%);
 }
@@ -199,7 +200,7 @@ a {
 
 .form-item {
   border-radius: 0.6rem;
-  padding: 1.2rem;
+  padding: 1.8rem;
   width: 100%;
   outline: none;
   border: none;
@@ -236,11 +237,11 @@ a {
 
 .shortened-links-container {
   padding: 11.5rem 0 1rem;
-  background-color: var(--Gray);
+  background-color: var(--Very-Light-Gray);
 }
 
 .advanced-statistics-container {
-  background-color: var(--Gray);
+  background-color: var(--Very-Light-Gray);
   padding-bottom: 9.5rem;
 }
 
@@ -288,6 +289,7 @@ a {
 
 .statistics-text {
   margin: 1.5rem 0;
+  color: var(--Grayish-Violet);
 }
 
 .statistics-card-container {
@@ -355,7 +357,7 @@ a {
 
 .footer {
   padding: 8rem 0 6rem;
-  background-color: var(--Very-Dark-Blue);
+  background-color: var(--Very-Dark-Violet);
   margin: 0;
   overflow: hidden;
 }
@@ -460,9 +462,6 @@ a {
   }
   #error-msg {
     bottom: 0.7rem;
-  }
-  .form-item {
-    padding: 0.8rem;
   }
   .shorten-btn {
     width: 20%;
