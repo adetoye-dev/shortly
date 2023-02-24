@@ -1,0 +1,20 @@
+{
+  "name": "url-shortening-api-master",
+  "version": "1.0.0",
+  "description": "![](./images/screenshot.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adetoye-dev/shortly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adetoye-dev/shortly/issues"
+  },
+  "homepage": "https://github.com/adetoye-dev/shortly#readme"
+}
