@@ -26,14 +26,18 @@ linksContainer.addEventListener("click", (e) => {
 
 //fetch data from api
 const fetchData = async (url) => {
-  const data = await fetch("https://api.shrtco.de/v2/shorten", {
-    method: "POST",
-    body: new URLSearchParams({
-      url: url,
-    }),
-  }).then((response) => response.json());
+  try {
+    const data = await fetch("https://api.shrtco.de/v2/shorten", {
+      method: "POST",
+      body: new URLSearchParams({
+        url: url,
+      }),
+    }).then((response) => response.json());
 
-  return data;
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 //form was submitted
