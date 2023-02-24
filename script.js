@@ -1,24 +1,8 @@
-const primaryNav = document.querySelector(".primary-navigation");
-const navMenuBtn = document.querySelector("#menu-btn");
-const navMenuIcon = document.querySelector("#menu-icon");
 const input = document.querySelector("#enter-link-input");
 const form = document.querySelector("#enter-link-form");
 const errorMsg = document.querySelector("#error-msg");
 const linksContainer = document.querySelector(".shortened-links");
 const linkListTemplate = document.querySelector("#shortened-url-template");
-
-//navigation control
-navMenuBtn.addEventListener("click", () => {
-  if (primaryNav.style.display == "flex") {
-    primaryNav.style.display = "";
-    navMenuIcon.classList.remove("fa-times");
-    navMenuIcon.classList.add("fa-bars");
-  } else {
-    primaryNav.style.display = "flex";
-    navMenuIcon.classList.remove("fa-bars");
-    navMenuIcon.classList.add("fa-times");
-  }
-});
 
 //local storage key and shortened list items
 const LOCAL_STORAGE_LIST_KEY = "shortened.links";
