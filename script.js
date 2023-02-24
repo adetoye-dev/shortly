@@ -27,10 +27,15 @@ linksContainer.addEventListener("click", (e) => {
 //fetch data from api
 const fetchData = async (url) => {
   try {
-    const data = await fetch("https://api.shrtco.de/v2/shorten", {
+    const data = await fetch("https://api.tinyurl.com/create", {
       method: "POST",
       body: new URLSearchParams({
         url: url,
+        domain: "tinyurl.com",
+      }),
+      headers: new Headers({
+        Authorization:
+          "Bearer RVlXNkZDiqzNlmGdSEMxBysgdT2fBNDRRzIWzWKKkq8LO6TQ1HEhXiWg7kAq",
       }),
     }).then((response) => response.json());
 
@@ -62,10 +67,11 @@ form.addEventListener("submit", async (e) => {
 //make list item
 const makeListItem = async (original_url) => {
   let short = await fetchData(original_url);
+
   let linkData = {
     original_url: original_url,
     id: Date.now().toString(),
-    shortenedURL: short.result.full_short_link,
+    shortenedURL: short.data.tiny_url,
   };
 
   return linkData;
