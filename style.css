@@ -253,6 +253,10 @@ a {
 
 .original-url {
   padding: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px;
   border-bottom: 1px solid var(--Grayish-Violet);
 }
 
